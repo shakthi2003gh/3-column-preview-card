@@ -1,0 +1,110 @@
+@import "/styles/normalize.css";
+
+*,
+*::after,
+::before {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+/* color palette */
+:root {
+  --color-b1-primary: hsl(31, 77%, 52%);
+  --color-b2-primary: hsl(184, 100%, 22%);
+  --color-b3-primary: hsl(179, 100%, 13%);
+
+  --color-main: hsl(0, 0%, 95%);
+  --color-paragraph: hsla(0, 0%, 100%, 0.75);
+}
+
+/* Typopgraphy */
+body {
+  font-size: 1.5rem;
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+}
+
+h3 {
+  font-family: "Big Shoulders Display", cursive;
+  text-transform: uppercase;
+  font-size: 4rem;
+  margin: 3.5rem 0;
+}
+
+p {
+  font-family: "Lexend Deca", sans-serif;
+  color: var(--color-paragraph);
+  margin: 0;
+}
+
+h3,
+.button {
+  color: var(--color-main);
+}
+
+/* Grid */
+.flex {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: auto;
+  width: fit-content;
+}
+
+@media screen and (min-width: 700px) {
+  .flex {
+    flex-direction: row;
+  }
+}
+
+/* Button */
+.button {
+  background-color: var(--color-main);
+  border: 2px solid rgba(255, 255, 255, 0);
+  border-radius: 20px;
+  color: inherit;
+  cursor: pointer;
+  font-family: "Lexend Deca", sans-serif;
+  margin: 2.5rem 0 1rem;
+  padding: 1rem 3rem;
+  text-decoration: none;
+  width: fit-content;
+}
+
+.button:hover {
+  color: var(--color-main);
+  background-color: inherit;
+  border: 2px solid var(--color-main);
+}
+
+/* card */
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+  width: clamp(298px, 298px, 298px);
+}
+
+.card--Bright-orange {
+  background-color: var(--color-b1-primary);
+  color: var(--color-b1-primary);
+}
+
+.card--Dark-cyan {
+  background-color: var(--color-b2-primary);
+  color: var(--color-b2-primary);
+}
+
+.card--Very-dark-cyan {
+  background-color: var(--color-b3-primary);
+  color: var(--color-b3-primary);
+}
+
+.card__icon {
+  width: 65px;
+}
